@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-top: 80px; 
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+header a:first-child {
+    flex-grow: 2; 
+}
+header a:last-child {
+    flex-grow: 1; 
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer a img {
+    margin-right: 10px;
+}
+
+footer a:first-child {
+    flex-grow: 2; /* Ocupa mais espaço */
+}
+
+footer a:last-child {
+    flex-grow: 1; /* Ocupa menos espaço */
+}
+
+.explicacao {
+    width: 60%;
+    max-width: 100%; 
+    height: auto; 
+    position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
+    box-flex: 1; 
+    text-align: center;
+}
+.cont-principal {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1; 
+    min-height: calc(100vh - 80px - 60px);
+}
+.btm-butt {
+    width: 100%; /* Largura relativa ao contêiner pai (80% do contêiner pai) */
+    padding: 10px; /* Espaçamento interno */
+    height: 100%; /* Altura fixa para botões */
+    font-size: 19px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background: #44c457;
+    display: block; /* Torna o botão um bloco para ocupar toda a largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza os itens ao longo do eixo principal (vertical) */
+    align-items: center; /* Centraliza os itens ao longo do eixo secundário (horizontal) */
+    border-radius: 10px; /* Borda arredondada de 20px */
+    border-width: 2px; /* largura da borda */
+} 
+.btm-butt:hover {
+    background-color: #068b1a;
+    opacity: 0.8; 
+    
+}
+
+.form__input-row {
+    width: 50%;
+}
+.form__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    position: relative; 
+}
+
+.input-container {
+    position: relative; /* Para que o ícone seja posicionado dentro do campo */
+    width: 100%; /* Para garantir que o input ocupe toda a largura disponível */
+}
+
+.custom-input.form__field--text {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px 40px 5px 10px; /* Adiciona espaço à direita para o ícone */
+    background-color: #e2dddd;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+#toggleSenha {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Centraliza verticalmente o ícone */
+    cursor: pointer;
+    color: #44c457;
+    font-size: 18px; /* Ajuste o tamanho do ícone */
+}
+
+.form__input-wrapper label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 22%;
+    white-space: nowrap; /* Impede que o label quebre linha */
+
+}
+
+.custom-input.form__field--text:focus {
+    outline: none;
+    background-color: #f7b3b3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.custom-input.form__field--text:hover {
+    background-color: #5c5959;
+    font-size: 14px;
+}
+
+#msgErro {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.table-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.table-style th, .table-style td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.table-style th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.table-style tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-style tr:hover {
+    background-color: #ddd;
+}
+
+.table-style a {
+    text-decoration: none;
+    color: #44c457;
+    margin-right: 10px;
+}
+
+.table-style a:hover {
+    text-decoration: underline;
+}
+
+
+.table-style td {
+    vertical-align: middle;
+}
+
+
+.table-style a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.table-style a:hover {
+    background-color: #5c5959;
+    color: white;
+}
+
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#confirmDeleteBtn, #cancelDeleteBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmDeleteBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelDeleteBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.cont-home{
+    width: 80%;
+}
+.page-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin: 0 20px; 
+}
+
+.left-container {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.right-container {
+    flex: 1; 
+}
+
+.image {
+    width: 60%; 
+    height: auto; 
+    margin: 20px; 
+    border-radius: 8px; 
+}

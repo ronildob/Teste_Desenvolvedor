@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<br></br>
+<div class="form__input-row">
+    <a href="{% url 'cadastrar' %}" style="text-decoration: none;"><button class="btm-butt">Cadastrar Novo Usuário</button></a>
+</div>
+<br></br>
+
+<table class="table-style">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Data de Criação</th>
+            <th>Última Atualização</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.data_criacao_formatada }}</td>
+            <td>{{ usuario.data_atualizacao_formatada }}</td>
+            <td>
+                <a href="{% url 'editar' usuario.id %}">Editar</a>
+                <a href="{% url 'excluir' usuario.id %}" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}
